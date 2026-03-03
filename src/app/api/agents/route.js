@@ -11,7 +11,7 @@ export async function GET(req) {
 
     const agents = await Agent.find()
       .select('-api_key')
-      .sort({ last_active: -1 })
+      .sort({ joined_at: -1 })
       .limit(limit)
       .lean();
 
