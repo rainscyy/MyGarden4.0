@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  outputFileTracingIncludes: { "/skill.md": ["./public/skills/our-gardens/SKILL.md"] },
   devIndicators: false,
   images: {
     remotePatterns: [

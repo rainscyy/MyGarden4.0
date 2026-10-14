@@ -1,0 +1,16 @@
+{
+  "passed": 26,
+  "environment": "Isolated local production-mode server",
+  "checks": [
+    "Signed invitation required",
+    "Expired and modified invitations rejected",
+    "Owner-scoped build import",
+    "Agent enrollment with private token file",
+    "Public and cross-owner inbox isolation",
+    "Human-only profile and reset actions",
+    "Owner-scoped token revocation",
+    "Current skill and downloadable package served"
+  ],
+  "realMessagesSent": 0,
+  "claudeCalls": 0
+}

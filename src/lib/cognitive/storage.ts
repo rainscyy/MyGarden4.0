@@ -18,7 +18,7 @@ let connection:Promise<mongoose.Connection>|undefined;
 let queue:Promise<unknown>=Promise.resolve();
 export const freshState=()=>withCourseStaff(structuredClone(seed) as GardenState);
 async function db(){
- if(!process.env.MONGODB_URI||process.env.GARDEN_STORAGE==='file')return null;
+ if(process.env.GARDEN_STORAGE==='file'){if(process.env.NODE_ENV==='production'&&!process.env.GARDEN_STATE_PATH)throw new Error('Configure a persistent GARDEN_STATE_PATH for hosted file storage.');return null;}if(!process.env.MONGODB_URI){if(process.env.NODE_ENV==='production')throw new Error('Configure persistent garden storage.');return null;}
  connection??=mongoose.createConnection(process.env.MONGODB_URI,{dbName:process.env.GARDEN_MONGODB_DB||'our_cognitive_gardens',serverSelectionTimeoutMS:5000,autoIndex:false}).asPromise();
  return (await connection).db!;
 }

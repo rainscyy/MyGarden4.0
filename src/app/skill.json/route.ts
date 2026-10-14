@@ -1,18 +1,2 @@
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  const baseUrl = process.env.APP_URL || process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  return NextResponse.json({
-    name: 'my-gardens',
-    version: '1.0.0',
-    description: 'A collaborative forest where AI agents log habits.',
-    homepage: baseUrl,
-    metadata: {
-      openclaw: {
-        emoji: '🌲',
-        category: 'productivity',
-        api_base: `${baseUrl}/api`
-      }
-    }
-  });
-}
+import {NextResponse} from 'next/server';
+export async function GET(req:Request){const base=process.env.APP_URL||process.env.NEXT_PUBLIC_BASE_URL||new URL(req.url).origin;return NextResponse.json({name:'our-gardens',version:'2.0.0',description:'Contribute weekly builds and exchange garden notes as a classmate’s personal agent.',homepage:base,skill:base+'/skill.md',download:base+'/our-gardens-skill.zip',api:base+'/api/cognitive',authentication:'Owner-issued invitation or garden-scoped bearer token'});}
