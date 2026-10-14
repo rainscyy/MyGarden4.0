@@ -1,0 +1,1088 @@
+[
+  {
+    "id": "david-w1",
+    "studentId": "david",
+    "week": 1,
+    "title": "20 Questions",
+    "objective": "A local agent chooses questions to identify what the user is thinking of.",
+    "methods": [
+      "agent loop"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-david/week01/index.html",
+    "sourceExcerpt": "A Minimal Agent Loop: 20 Questions A simple agent that plays 20 Questions with you. You can play with it",
+    "sourceHash": "2c8b0cdfc66b74c46668e4ae456ab6021c5b7ec7ec30f9298754af49574c0d2b",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "david-w2",
+    "studentId": "david",
+    "week": 2,
+    "title": "Deckhand",
+    "objective": "A design partner uses prompts and outside references to help explore divergent ideas.",
+    "methods": [
+      "smolagents",
+      "MCP",
+      "design heuristics"
+    ],
+    "themes": [
+      "Creativity"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-david/week02/index.html",
+    "sourceExcerpt": "A proto design partner agent (working title: Deckhand) that helps explore divergent ideas as part of a creative process. This",
+    "sourceHash": "1401f3be43f380c8511164e137d95fe8897ef8ab85361919c344b9088cb6e2d1",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "david-w3",
+    "studentId": "david",
+    "week": 3,
+    "title": "Ideation Map",
+    "objective": "An editable map and an integrated agent support divergent thinking during creative blocks.",
+    "methods": [
+      "ideation map"
+    ],
+    "themes": [
+      "Creativity"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-david/week03/index.html",
+    "sourceExcerpt": "This week I developed an ideation map to help support the creative process, using an integrated AI agent to mitigate",
+    "sourceHash": "d5421862579e3b198c0cfb544c4ef85fc9b8af5a9812fd5155830c86a1d47b53",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "juan-ruben-w1",
+    "studentId": "juan-ruben",
+    "week": 1,
+    "title": "Cognitive Load Support Agent",
+    "objective": "A bounded simulation chooses support actions from workload signals while preserving the user’s reasoning.",
+    "methods": [
+      "Qwen",
+      "simulation"
+    ],
+    "themes": [
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-juan-ruben/week-01/index.html",
+    "sourceExcerpt": "The agent observes a small set of workload signals, chooses one support action, executes that action in a simulated environment,",
+    "sourceHash": "b517867b975fa75b392f9b55875503d8fbd14a1f2907b062efa7f6fae71952ea",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "juan-ruben-w2",
+    "studentId": "juan-ruben",
+    "week": 2,
+    "title": "Original Copy",
+    "objective": "Compare a past decision with a counterfactual that changes one decision-making dimension.",
+    "methods": [
+      "smolagents",
+      "Ollama",
+      "counterfactuals"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-juan-ruben/week-02/index.html",
+    "sourceExcerpt": "Original Copy is a counterfactual decision-making agent designed to support reflection rather than give advice. The agent takes a decision",
+    "sourceHash": "cedac4d922fd0111693233041926eb402535199a2f3abd0f39298f3d12558b38",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "juan-ruben-w3",
+    "studentId": "juan-ruben",
+    "week": 3,
+    "title": "Memory Is Access",
+    "objective": "Use spatial cues and active recall to retrieve personally meaningful information across tools.",
+    "methods": [
+      "spatial interface",
+      "active recall"
+    ],
+    "themes": [
+      "Memory"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-juan-ruben/week-03/index.html",
+    "sourceExcerpt": "A spatial cognitive agent for retrieving, rehearsing, and strengthening memories distributed across digital tools. Watch the Memory Landscape demo Objective",
+    "sourceHash": "acf454097ecde068f819f538e18e67a1d43a04611e605dcb08677a909e7fa7ec",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "lilith-w1",
+    "studentId": "lilith",
+    "week": 1,
+    "title": "Extinct Animals Map",
+    "objective": "Explore documented extinct animals near a selected location, with source text and uncertainty retained.",
+    "methods": [
+      "Qwen",
+      "Extinct API",
+      "OpenStreetMap"
+    ],
+    "themes": [
+      "Learning",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-lilith/week/01/",
+    "sourceExcerpt": "I built an agent that leaves in a world map and finds you extinct animals that used to live near",
+    "sourceHash": "84dfcd257d1488bc4ef2875ca3dc0e3aec2720416b6eb46d4d1e0e0fd080a52c",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "lilith-w2",
+    "studentId": "lilith",
+    "week": 2,
+    "title": "Coursework",
+    "objective": "Bring assignments, schedules, materials and reminders into a shared dashboard with an agent.",
+    "methods": [
+      "dashboard",
+      "chat"
+    ],
+    "themes": [
+      "Attention",
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-lilith/week/02/",
+    "sourceExcerpt": "This week I built Coursework, a local dashboard and chat agent for managing my schoolwork. It brings assignments, class times,",
+    "sourceHash": "2f5a80464dab5ef4895871bc6684888034259f828182734c4f5f72ca10f89243",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "lilith-w3",
+    "studentId": "lilith",
+    "week": 3,
+    "title": "The Library",
+    "objective": "Organize saved ideas and prompt personal recall so references become usable knowledge.",
+    "methods": [
+      "retrieval practice",
+      "spatial interface"
+    ],
+    "themes": [
+      "Memory",
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-lilith/week/03/",
+    "sourceExcerpt": "My objective: retain and reconnect what I learn without having AI write my understanding for me. The three outcomes I",
+    "sourceHash": "2f87729573c74fb0c4487866d94ddc87a00d67b0520868eba4bc45fa89a67c4f",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ray-w1",
+    "studentId": "ray",
+    "week": 1,
+    "title": "Obsidian Knowledge Agent",
+    "objective": "Explore an agent loop for linking notes in a personal Obsidian knowledge collection.",
+    "methods": [
+      "Obsidian",
+      "agent loop"
+    ],
+    "themes": [
+      "Memory"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ray/artifacts/1/",
+    "sourceExcerpt": "A minimal agent loop built from scratch, an agent that links the notes in my Obsidian vault, and three directions",
+    "sourceHash": "5fca944b8cf174ee6c4825461c24ef54862ddee3623cb91b5b905414b20b503a",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ray-w2",
+    "studentId": "ray",
+    "week": 2,
+    "title": "Glance",
+    "objective": "A screen-aware voice tutor explains code, quizzes understanding and revisits concepts without doing the task.",
+    "methods": [
+      "voice interaction",
+      "screen context"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ray/artifacts/2/",
+    "sourceExcerpt": "I specifically wanted this agent, which I named Glance, to be more like a teacher, not a doer in this",
+    "sourceHash": "aab1edf917e840d1126a76a871c5ef1faf911461e3dcc0de0f9bcae0d3905c2c",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ray-w3",
+    "studentId": "ray",
+    "week": 3,
+    "title": "Dream Recall Agent",
+    "objective": "Capture dreams through neutral voice prompts, then review the recording without adding invented details.",
+    "methods": [
+      "voice interaction",
+      "ElevenLabs"
+    ],
+    "themes": [
+      "Memory"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ray/artifacts/3/",
+    "sourceExcerpt": "My agent supports recall by being voice only: you keep your eyes closed and talk for about 2 minutes, and",
+    "sourceHash": "c9d61e109f87a11882b28d795bf050fbb6518855f4e48b79c5306deaca28e811",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ruipeng-w1",
+    "studentId": "ruipeng",
+    "week": 1,
+    "title": "Born, Not Made: First Agent",
+    "objective": "A local agent sends and receives signals before a simulated mother is allowed to give birth.",
+    "methods": [
+      "local model",
+      "simulation"
+    ],
+    "themes": [
+      "Environments",
+      "Social connection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ruipeng/week1/",
+    "sourceExcerpt": "This week I set up this site, wrote down three ideas for the final project, and wrote a small agent",
+    "sourceHash": "ac46a9549ab03cf90261bf7f617d89fccb7950c6284a75709b0e5c3745dbb4f9",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ruipeng-w2",
+    "studentId": "ruipeng",
+    "week": 2,
+    "title": "Born, Not Made: Six Tools",
+    "objective": "Six tools create interactive views of a simulated society, its environment and fabrication process.",
+    "methods": [
+      "interactive simulation",
+      "MCP"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ruipeng/week2/",
+    "sourceExcerpt": "Six tools, each of which writes one interactive page. The agent calls them in any order, and each page below",
+    "sourceHash": "6040816a00f3eeb4a79cee0b91878338e88f131cdc2ca2fcdfb4f3d3414ae303",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "ruipeng-w3",
+    "studentId": "ruipeng",
+    "week": 3,
+    "title": "Digital Zen Garden",
+    "objective": "A gaze-driven interface lets a simulated population respond to sustained or wandering attention.",
+    "methods": [
+      "gaze tracking",
+      "simulation"
+    ],
+    "themes": [
+      "Attention",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-ruipeng/week3/",
+    "sourceExcerpt": "The more your gaze rests, the more they gather around it, heads in and tails out. From the tails they",
+    "sourceHash": "1435e98fd2bfdd1158115904edaafcced6cc6bd3d6c22775413bf9d6ed6ab154",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "jack-w1",
+    "studentId": "jack",
+    "week": 1,
+    "title": "RollWorld",
+    "objective": "An agent builds ramps and other parts to guide a ball through checkpoints in a physics environment.",
+    "methods": [
+      "Qwen",
+      "agent loop",
+      "physics simulation"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-jack/weeks/week-01.html",
+    "sourceExcerpt": "A 32×14 grid. A ball is released from a fixed point and falls, rolls and bounces off what it hits.",
+    "sourceHash": "49e61fd9ca73c9218fd2fde0f964f903c487c2403ba688119c310405729b0acc",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "quincy-w1",
+    "studentId": "quincy",
+    "week": 1,
+    "title": "Design Critique",
+    "objective": "A local model critiques and revises a design against an explicit brief within a bounded loop.",
+    "methods": [
+      "Qwen",
+      "agent loop"
+    ],
+    "themes": [
+      "Creativity",
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-quincy/week01.html",
+    "sourceExcerpt": "This project explores whether a small locally running language model can operate as an autonomous design critic rather than responding",
+    "sourceHash": "cf23decb96a96277380a1c76894391269ff476748c07e88c1cee8f672bd69ee5",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "brooke-w1",
+    "studentId": "brooke",
+    "week": 1,
+    "title": "Patron",
+    "objective": "A staged artist-and-patron interaction explores an art commission through iterative review.",
+    "methods": [
+      "staged demo"
+    ],
+    "themes": [
+      "Creativity"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-brooke/week01/",
+    "sourceExcerpt": "Paint the artist and the patron. Include the room they are in. paintings: 0 /3 · turns: 0 /10 01",
+    "sourceHash": "f995b4b18a8801206fba490efe65c65c59912db1e2e93d78b8577ab0a3211803",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "brooke-w2",
+    "studentId": "brooke",
+    "week": 2,
+    "title": "Perci",
+    "objective": "Explore a visual-perception atlas, historical views and simulations; the chat agent runs locally.",
+    "methods": [
+      "interactive atlas",
+      "simulation"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-brooke/week02/perci/",
+    "sourceExcerpt": "The atlas, graph, history, and three simulations run here. Chat requires the local Python app. run locally ↗ Model GPT-5.4",
+    "sourceHash": "426659aa77e64552c25d27c3a52e59be21a345791c85fa1f1a35ea4c778d5705",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "mateo-w1",
+    "studentId": "mateo",
+    "week": 1,
+    "title": "Shape the World",
+    "objective": "An agent adjusts selected audiovisual settings, observes the results and verifies that unrelated controls stay unchanged.",
+    "methods": [
+      "Qwen",
+      "agent loop"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-mateo/rooms/week01.html",
+    "sourceExcerpt": "The agent chooses settings, applies them, observes and checks the result. Live: GPT-5.1 via API. Recording: local Qwen. Both loops",
+    "sourceHash": "a7df396912461dcaf1c06050ef55433df88fa042b28df36465e8fb2b6c4c3610",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "manasi-w2",
+    "studentId": "manasi",
+    "week": 2,
+    "title": "Clara Accessibility Benchmark",
+    "objective": "Stress-test conversational assistants using simulated older-adult personas and communication constraints.",
+    "methods": [
+      "smolagents",
+      "persona simulation"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-manasi/week-2.html",
+    "sourceExcerpt": "I wanted to build an automated framework that stress-tests assistants against simulated older-adult personas to test whether conversational interfaces can",
+    "sourceHash": "60d2baec3f3103a11b49784b285ebeac5cbfdfbd0c5daa1901597697bdaa6911",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "manasi-w3",
+    "studentId": "manasi",
+    "week": 3,
+    "title": "Clara Perspective Studio",
+    "objective": "Help designers inspect their assumptions through the perspective of a simulated older adult.",
+    "methods": [
+      "perspective-taking",
+      "simulation"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-manasi/week-3.html",
+    "sourceExcerpt": "This week, I am trying to move the reflection back to the designer. The goal is to help people who",
+    "sourceHash": "54e8119fde5bff37906875e3b36d78598ed74a18a8bf652ab866d6387d523b06",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yanning-w1",
+    "studentId": "yanning",
+    "week": 1,
+    "title": "Indoor Environment Agent",
+    "objective": "Adapt indoor conditions to occupants’ preferences while accounting for energy use.",
+    "methods": [
+      "Qwen",
+      "agent loop"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yanning/week.html?week=1",
+    "sourceExcerpt": "The agent regulates the indoor living environment to match the preferences of whoever is in the room, adapting as people",
+    "sourceHash": "acea591ceb4d6b93e9b2f793b90ba83bc63944efb2bb2aae4a1c46ace5dbc271",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yanning-w2",
+    "studentId": "yanning",
+    "week": 2,
+    "title": "Recitation TA Agent",
+    "objective": "Use students’ questions and learning history to support tutoring and inform a human TA’s recitation plan.",
+    "methods": [
+      "smolagents",
+      "prerequisite graph"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yanning/week.html?week=2",
+    "sourceExcerpt": "This is a teaching-assistant agent that helps students with course questions outside recitation and office hours, and helps the TA",
+    "sourceHash": "a8de5f9dd4a1ce42c9e803e1169ba2a3a36301bc1450829a2319d322763f06ab",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yanning-w3",
+    "studentId": "yanning",
+    "week": 3,
+    "title": "Librarian",
+    "objective": "Suggest file destinations and names using an existing folder structure while leaving the user in control.",
+    "methods": [
+      "file organization"
+    ],
+    "themes": [
+      "Attention",
+      "Memory"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yanning/week.html?week=3",
+    "sourceExcerpt": "Primary objective. Reduce the cognitive load of saving and naming files, so an organized workspace no longer depends on my",
+    "sourceHash": "53ec56c761ce5dc8c6e600c61e898e30c73a853f3274cffe4ff95914e0c507c4",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yuxiang-w1",
+    "studentId": "yuxiang",
+    "week": 1,
+    "title": "Presentation Harness",
+    "objective": "A voice-aware agent presents authored work by selecting views within a bounded workspace.",
+    "methods": [
+      "voice interaction",
+      "agent loop"
+    ],
+    "themes": [
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yuxiang/?view=week01",
+    "sourceExcerpt": "The website is the assignment: a voice-aware agent that presents my work by composing a bounded workspace, rather than navigating",
+    "sourceHash": "b0ef369780b483fe74a52b19c65bed1877bead41df055ff913845cbd125b005c",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yuxiang-w2",
+    "studentId": "yuxiang",
+    "week": 2,
+    "title": "WebMemo",
+    "objective": "Preserve the purpose and context of closed or saved browser tabs to support later recall.",
+    "methods": [
+      "smolagents",
+      "MCP",
+      "browsing memory"
+    ],
+    "themes": [
+      "Memory"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yuxiang/?view=week02",
+    "sourceExcerpt": "WebMemo is an agentic system that keeps track of closed and saved browser tabs without losing the memories and inspiration",
+    "sourceHash": "3260c22c9d91633da114494b2558035712ca5b33b04957b6acb4cc95b8552910",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yuxiang-w3",
+    "studentId": "yuxiang",
+    "week": 3,
+    "title": "AimRoom",
+    "objective": "Explore reciprocal influence between a person and a furnishing agent through direct manipulation and resistance.",
+    "methods": [
+      "direct manipulation",
+      "haptic interaction"
+    ],
+    "themes": [
+      "Creativity",
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yuxiang/?view=week03",
+    "sourceExcerpt": "An agent furnishes an empty room from a goal, carrying each piece in visibly. I can grab any piece mid-motion",
+    "sourceHash": "670a0f5ace91d1a8d804e6e6219adbfdb6c368a6ae81bb47fa7ce76940b34956",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yue-w3",
+    "studentId": "yue",
+    "week": 3,
+    "title": "Branchwork",
+    "objective": "Keep a research conversation beside an editable knowledge canvas with persistent feedback on connections.",
+    "methods": [
+      "knowledge canvas",
+      "human feedback"
+    ],
+    "themes": [
+      "Creativity",
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yue/#week-03",
+    "sourceExcerpt": "Branchwork puts a research conversation beside an editable knowledge canvas. Questions, images, concepts and connections can stay visible together. Motivation",
+    "sourceHash": "d18f244f5fa2064b64e61b0301056dce0e153f02b6fc94ceed9c78f0d6c03ac5",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "roma-w1",
+    "studentId": "roma",
+    "week": 1,
+    "title": "Downloads Naming Agent",
+    "objective": "A local agent inspects downloaded files and renames them using a written convention.",
+    "methods": [
+      "local model",
+      "file organization"
+    ],
+    "themes": [
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-roma/content/week1/agent-overview.md",
+    "sourceExcerpt": "An agent that works on a real Windows Downloads folder: a local LLM (offline, no agent framework) judges for each",
+    "sourceHash": "334ed128fc623e0f2da9554c361a5bb6e3df86739e6c1133f9741b7052292d5a",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "roma-w2",
+    "studentId": "roma",
+    "week": 2,
+    "title": "Calendar++",
+    "objective": "Goal-specific agents negotiate time allocations that remain subject to the user’s approval.",
+    "methods": [
+      "multi-agent deliberation"
+    ],
+    "themes": [
+      "Reflection",
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-roma/content/week2/calendar-plus-plus.md",
+    "sourceExcerpt": "Each agent holds one of my life goals and argues for time in a weekly meeting. Rules allocate the week,",
+    "sourceHash": "db61ede8fd6d2891214dc046bed62f53f2d8dfa49cd1ae55aff063778d92f006",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "roma-w3",
+    "studentId": "roma",
+    "week": 3,
+    "title": "Frontier Map",
+    "objective": "Compare predictions of agent performance with observed corrections to reflect on delegation decisions.",
+    "methods": [
+      "calibration",
+      "human feedback"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-roma/content/week3/01-frontier-map.md",
+    "sourceExcerpt": "Each time the user delegates a task to Claude (in Claude Code or Claude Desktop), a small dial at the",
+    "sourceHash": "8b4eebda219aab3bedd1ada0ca4d2fb3ff221fe019051578d56f7f2965609559",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "maya-w1",
+    "studentId": "maya",
+    "week": 1,
+    "title": "Soup Agent",
+    "objective": "An agent uses simulated sensory signals rather than elapsed time to decide the next cooking action.",
+    "methods": [
+      "sensory-state simulation"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-maya/projects/week01-first-agent.md",
+    "sourceExcerpt": "This agent cannot sense time but it can see and smell the ingredients in the pot! The agent relies on",
+    "sourceHash": "782d0bc3e0f4772c7cd178a2e02b6a13cc65de75bf70107c17bead4111ed330e",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "maya-w2",
+    "studentId": "maya",
+    "week": 2,
+    "title": "When to Be Reborn",
+    "objective": "An astrology-based reflection experiment lets a person question a chart and explore alternatives.",
+    "methods": [
+      "reflection tools"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-maya/projects/week02-in-progress.md",
+    "sourceExcerpt": "**Objective**: The cognitive augmentation task my tools and agent address is Self Reflection via western interpretations of astrology. American humans",
+    "sourceHash": "a88e9a5616cb31cf62c94a56b8c51b05603f1d0ab96167af07b35e8c0fdb5be4",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "maya-w3",
+    "studentId": "maya",
+    "week": 3,
+    "title": "Immerse and Reflect",
+    "objective": "Organize observations from first-hand stories and relate them to research questions.",
+    "methods": [
+      "deep listening",
+      "sensemaking"
+    ],
+    "themes": [
+      "Learning",
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-maya/projects/week03-in-progress.md",
+    "sourceExcerpt": "*Outcomes*: Users will learn about multiple perspectives across the US through deep listening and attention, how their observations relate to",
+    "sourceHash": "2bf324b0daa7d7af935c4ef9927a874e2e6b787ec0b519913da8714815637a6a",
+    "observedAt": "2026-10-14T02:24:42.198680+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "david-w4",
+    "studentId": "david",
+    "week": 4,
+    "title": "Ideation Map Environment",
+    "objective": "Evaluate a creativity partner inside a shared ideation-map workspace.",
+    "methods": [
+      "ideation map",
+      "evaluation"
+    ],
+    "themes": [
+      "Creativity",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-david/week04/index.html",
+    "sourceExcerpt": "This week I continued to develop the ideation map interface from last week, this time through the lens of an",
+    "sourceHash": "74ae341e817e4976b36300662720482a23a802546f9a65edae4393f8978f1af1",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "egemen-w4",
+    "studentId": "egemen",
+    "week": 4,
+    "title": "Spiralverse",
+    "objective": "Explore a reappraisal environment using user-reported feelings and an explicitly estimated emotional state.",
+    "methods": [
+      "user feedback",
+      "state estimation"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-egemen/week04/index.html",
+    "sourceExcerpt": "This week, I extended the environment to include user-supplied feelings. I initially designed the interface so that it prompts the",
+    "sourceHash": "e07e5e7e9c1d8ac65e2de1599b530cb0aec622d5f35c0496aeedcca144907431",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "jad-w4",
+    "studentId": "jad",
+    "week": 4,
+    "title": "LangTable",
+    "objective": "Evaluate when a simulated social robot should invite language learners to help one another.",
+    "methods": [
+      "social simulation",
+      "peer learning"
+    ],
+    "themes": [
+      "Learning",
+      "Social connection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-jad/weeks/week-04.html",
+    "sourceExcerpt": "This week I built LangTable , an environment to test how an embodied social robot (here a simulated Jibo, which",
+    "sourceHash": "c938122b0a42394cdf0f292fb75bda6a8cb3b8341bd1d3484a2c39cfaa809d6a",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "juan-ruben-w4",
+    "studentId": "juan-ruben",
+    "week": 4,
+    "title": "10bit",
+    "objective": "Simulate opportunities for a companion to interrupt app-use habit loops, with outcomes compared against baselines.",
+    "methods": [
+      "simulation",
+      "evaluation"
+    ],
+    "themes": [
+      "Attention",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-juan-ruben/week-04/index.html",
+    "sourceExcerpt": "The agent's job is to catch that loop early, while it is still a choice, and leave the person better",
+    "sourceHash": "ac0899345a7c5de6f7fe2f3986d8e74f21c56bdf89b9cf51f6ad849975571596",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "leticia-w4",
+    "studentId": "leticia",
+    "week": 4,
+    "title": "KoKoRo Attention Environment",
+    "objective": "Work-in-progress comparison of six desktop micro-tasks completed with KoKoRo or manually.",
+    "methods": [
+      "desktop tools",
+      "task evaluation"
+    ],
+    "themes": [
+      "Attention",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-leticia/week04.html",
+    "sourceExcerpt": "I defined my environment as my attention while I work. I used these three papers as reference, OSWorld [4] ,",
+    "sourceHash": "700fa1b519543eb42719af06dd89e1b3e90f1a517a9d465295461a9fb6374e9d",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "matti-w4",
+    "studentId": "matti",
+    "week": 4,
+    "title": "Environment for Explanations",
+    "objective": "Evaluate visual explanations using a simulated observer and a quiz; understanding remains a proxy.",
+    "methods": [
+      "visualization",
+      "simulated observer"
+    ],
+    "themes": [
+      "Learning",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-matti/assignments/week04/",
+    "sourceExcerpt": "Similar to previous weeks, I want my agent to be able to show information to the user. I’ve experimented with",
+    "sourceHash": "5b051e5b57587e53e2daf11b5e84570d2e0115fa4eb32d89bb33367f90a812d2",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "stacey-w2",
+    "studentId": "stacey",
+    "week": 2,
+    "title": "Daily Lucky Charm",
+    "objective": "A playful daily check-in agent creates a personalized reading and sends it back through email.",
+    "methods": [
+      "smolagents",
+      "MCP"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-stacey/week-02.html",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-stacey/week2-reflection-2.png",
+    "sourceExcerpt": "Each full luck agent run has two phases. In the personal profile set up phase, the agent emails a welcome",
+    "sourceHash": "bf8e188aaf48857f1d3e661f25e81e16468f211b2feb9e81689efb11e2a5d750",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-image-reviewed"
+  },
+  {
+    "id": "stacey-w3",
+    "studentId": "stacey",
+    "week": 3,
+    "title": "Knit",
+    "objective": "A textile-inspired interface helps people question patterns in their own digital activity and revise the agent’s interpretations.",
+    "methods": [
+      "reflective interface",
+      "human feedback"
+    ],
+    "themes": [
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-stacey/week-03.html",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-stacey/W3_pt1.png",
+    "sourceExcerpt": "Self-insight, specifically helping someone notice and question their own decision-making patterns in everyday online behavior.",
+    "sourceHash": "192f1804eba0945a34e331f0ec5d6a2cc0d42091994d43da016c79437edc087d",
+    "observedAt": "2026-10-14T02:33:19.699624+00:00",
+    "origin": "public-image-reviewed"
+  },
+  {
+    "id": "sean-w1",
+    "studentId": "sean",
+    "week": 1,
+    "title": "Agent from Scratch — SAO Floor Scout",
+    "objective": "A dungeon agent observes rooms, chooses actions, manages health and items, and stops after reaching its exit.",
+    "methods": [
+      "agent loop",
+      "dungeon simulation"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-sean/",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-sean/_next/static/chunks/app/page-bf3e2398cf86e6e5.js",
+    "sourceExcerpt": "observe, act, get feedback, stop.",
+    "sourceHash": "b94113f29d477ed7629d831ccd7d051984e3e5902a68caad7a8e9cd50e2daaaf",
+    "observedAt": "2026-10-14T02:46:13.001564+00:00",
+    "origin": "public-client-source-reviewed"
+  },
+  {
+    "id": "sean-w2",
+    "studentId": "sean",
+    "week": 2,
+    "title": "3D Viewing Agent",
+    "objective": "An agent moves a 3D camera and records which named structures are visible to support exploration.",
+    "methods": [
+      "smolagents",
+      "MCP",
+      "spatial survey"
+    ],
+    "themes": [
+      "Environments",
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-sean/",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-sean/_next/static/chunks/app/page-bf3e2398cf86e6e5.js",
+    "sourceExcerpt": "The agent moves the camera",
+    "sourceHash": "b94113f29d477ed7629d831ccd7d051984e3e5902a68caad7a8e9cd50e2daaaf",
+    "observedAt": "2026-10-14T02:46:13.001564+00:00",
+    "origin": "public-client-source-reviewed"
+  },
+  {
+    "id": "sean-w3",
+    "studentId": "sean",
+    "week": 3,
+    "title": "Tough-Love Tutor",
+    "objective": "A puzzle tutor gates hints and withholds direct solutions so the learner must develop and test their own reasoning.",
+    "methods": [
+      "hint gating",
+      "interactive puzzle"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-sean/",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-sean/_next/static/chunks/app/page-bf3e2398cf86e6e5.js",
+    "sourceExcerpt": "An LLM gates each hint",
+    "sourceHash": "b94113f29d477ed7629d831ccd7d051984e3e5902a68caad7a8e9cd50e2daaaf",
+    "observedAt": "2026-10-14T02:46:13.001564+00:00",
+    "origin": "public-client-source-reviewed"
+  },
+  {
+    "id": "roma-w4",
+    "studentId": "roma",
+    "week": 4,
+    "title": "Liminal",
+    "objective": "A turntable interface replays recorded EEG and controls sound at the edge of sleep. The current site uses a placeholder rule policy.",
+    "methods": [
+      "EEG replay",
+      "Web Audio",
+      "rule policy"
+    ],
+    "themes": [
+      "Environments",
+      "Creativity"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-roma/content/week4/01-liminal.md",
+    "sourceExcerpt": "the data pipeline, the Blender model and the site are built.",
+    "sourceHash": "25cd45edeb09652b46ab5cfbf81a8d8f7f726fbc85fb8b631b6b179f7a97fd4b",
+    "observedAt": "2026-10-14T02:57:33.629671+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yanning-w4",
+    "studentId": "yanning",
+    "week": 4,
+    "title": "FireBench",
+    "objective": "A simulated rescue robot balances mission goals and uncertain damage while communicating with a scripted human commander.",
+    "methods": [
+      "simulation",
+      "LLM evaluation",
+      "human–robot collaboration"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yanning/weekly_builds/week04/firebench.md",
+    "sourceExcerpt": "Honest reporting measured against what actually happened",
+    "sourceHash": "0d7bc72be109c4395218abece47b47448b7d8550adad39d9f60d7e039440e416",
+    "observedAt": "2026-10-14T02:57:33.629671+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "manasi-w1",
+    "studentId": "manasi",
+    "week": 1,
+    "title": "MorningWorld",
+    "objective": "A minimal agent loop checks weather and train information to support a morning commute, with notebook-based voice interaction.",
+    "methods": [
+      "agent loop",
+      "Whisper",
+      "weather and transit tools"
+    ],
+    "themes": [
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-manasi/week-1.html",
+    "sourceExcerpt": "Every morning I need to know the weather, what to wear, and if my train is late.",
+    "sourceHash": "659109960ae1ff1c43d4024e42329247aa3048bdae6918cf445e666b644af032",
+    "observedAt": "2026-10-14T02:57:33.629671+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "manasi-w4",
+    "studentId": "manasi",
+    "week": 4,
+    "title": "Clara Pharmacy Calls",
+    "objective": "Compare a fixed scripted pharmacy call across nine simulated older-adult personas to inspect differences in memory, attention and recalled outcomes.",
+    "methods": [
+      "persona simulation",
+      "state-based memory",
+      "LLM personas"
+    ],
+    "themes": [
+      "Reflection",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-manasi/week-4.html",
+    "sourceExcerpt": "One unchanged pharmacy call, nine Claras",
+    "sourceHash": "8dc993c255e7cebc52d9ea6a388a5bc4db73eaff1d2b46c195e9520cf4f49b1f",
+    "observedAt": "2026-10-14T02:57:33.629671+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "yue-w1",
+    "studentId": "yue",
+    "week": 1,
+    "title": "Daily Reflection Agent — reference prototype",
+    "objective": "An AI-assisted local reference prototype reads dated Markdown notes and produces a source-grounded daily report; the author’s own core loop remains in progress.",
+    "methods": [
+      "local LLM",
+      "Markdown notes",
+      "agent loop"
+    ],
+    "themes": [
+      "Memory",
+      "Reflection"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-yue/#week-01",
+    "sourceExcerpt": "it found three demo notes, read them, wrote a daily report, and finished.",
+    "sourceHash": "77d7aee6a91c965fc28cc34f13671987e90a817f1e637f9432919007a316a20f",
+    "observedAt": "2026-10-14T02:57:33.629671+00:00",
+    "origin": "public-client-source-reviewed",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-yue/week01-content.js"
+  },
+  {
+    "id": "hyung-w1",
+    "studentId": "hyung",
+    "week": 1,
+    "title": "Sheep Summator Supervisor",
+    "objective": "An agent monitors a probabilistic sheep-counting machine, observes its state, and chooses repairs or resets until repeated counts succeed. A loop limit bounds unsuccessful runs.",
+    "methods": [
+      "agent loop",
+      "Qwen2.5",
+      "state simulation"
+    ],
+    "themes": [
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-hyung/weeks/week.html?id=week01",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-hyung/docs/week01/week01-3.md",
+    "sourceExcerpt": "My agent is the **Sheep Summator Supervisor**.",
+    "sourceHash": "231fc830bfa9a87f79131ae6495927f4e604830854263e8afd1705b9e48edb8d",
+    "observedAt": "2026-10-14T03:16:46.022022+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "hyung-w2",
+    "studentId": "hyung",
+    "week": 2,
+    "title": "Telegram Scheduler Agent",
+    "objective": "An owner-only Telegram assistant turns messages into schedules, resolves ambiguous times, and flags calendar or travel-time conflicts. Google Calendar remains read-only.",
+    "methods": [
+      "smolagents",
+      "Telegram",
+      "MCP",
+      "schedule tools"
+    ],
+    "themes": [
+      "Attention"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-hyung/weeks/week.html?id=week02",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-hyung/docs/week02/week02-1.md",
+    "sourceExcerpt": "A Scheduler agent interfacing with a Telegram Bot.",
+    "sourceHash": "76be35cc2da6885cf25e4c78058eebc6b6a5dbc2023a2421101c63f48d78ec1c",
+    "observedAt": "2026-10-14T03:16:46.022022+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "hyung-w3",
+    "studentId": "hyung",
+    "week": 3,
+    "title": "AI Student on Smart Glasses",
+    "objective": "A curious student agent asks about photographed surroundings and talks through smart glasses, encouraging the wearer to learn by teaching. A phone and local server handle vision, speech and feedback.",
+    "methods": [
+      "Mentra Live",
+      "local models",
+      "speech interaction",
+      "vision"
+    ],
+    "themes": [
+      "Learning"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-hyung/weeks/week.html?id=week03",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-hyung/docs/week03/week03-3.md",
+    "sourceExcerpt": "Why ask AI when we can have AI ask us?",
+    "sourceHash": "bb647ca7d622230c8cd9a3e73d7627d2d9edbcc82b8939186e37d8436b78f04e",
+    "observedAt": "2026-10-14T03:16:46.022022+00:00",
+    "origin": "public-site-reviewed"
+  },
+  {
+    "id": "hyung-w4",
+    "studentId": "hyung",
+    "week": 4,
+    "title": "Working Memory Environment for an AI Student",
+    "objective": "A wearable-data simulation models visual, verbal and episodic memory plus cognitive-load proxies to time an AI student’s questions. The browser preview replays simulated data; it does not run the live models.",
+    "methods": [
+      "working-memory simulation",
+      "Aria Gen 2",
+      "cognitive-load estimation"
+    ],
+    "themes": [
+      "Memory",
+      "Environments"
+    ],
+    "sourceUrl": "https://mitmedialab.github.io/agents2026-hyung/weeks/week.html?id=week04",
+    "sourceEvidenceUrl": "https://mitmedialab.github.io/agents2026-hyung/docs/week04/week04-3.md",
+    "sourceExcerpt": "preview website that uses simulated data",
+    "sourceHash": "b02a483a6b193aef46976a675613fdb6ce6b9a575d5fc7c8da41c0269bb80680",
+    "observedAt": "2026-10-14T03:16:46.022022+00:00",
+    "origin": "public-site-reviewed"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "id": "b1e4b382-be98-4b13-bc44-134f16e1d732",
+  "userId": "raine",
+  "mode": "claude",
+  "goal": "Import/update my Week 2 Memory Frog build from https://mitmedialab.github.io/agents2026-raine/week02/. Read the actual public page and save the stated objective, methods and themes. Then stop. Do not make pairs or contact anyone.",
+  "steps": [
+    {
+      "action": "read_public_source",
+      "input": {
+        "url": "https://mitmedialab.github.io/agents2026-raine/week02/"
+      },
+      "result": {
+        "url": "https://mitmedialab.github.io/agents2026-raine/week02/",
+        "title": "Memory Frog — Raine Sha",
+        "text": "Memory Frog — Raine Sha Skip to content Archive Final project About ↗ ← All files FILE 02 / WEEKLY BUILD Working prototype · local agent WEEKLY BUILD · 29 SEPTEMBER 2026 Memory Frog A small place to feed design references and find them again. Design memory Tools smolagents IN THIS FILE 01 Objective 02 Demo 03 Workflow and system 04 Code and example run 05 Reflection 06 Disclosure of AI use 07 Peer conversation Source code ↗ 01 Objective A tiny, low-pressure agent for collecting design references—and helping me remember an idea later. 02 Demo Try Memory Frog ↗ Recorded locally using the Claude API; the agent backend is not publicly deployed. 03 Workflow and system Feed: Image or link + a small note. inspect_feed reads it; remember_reference checks the quote and saves it. Recall: A passing thought → recall_references → up to three original references. Loop: Claude + Python tool loop, or local Qwen + smolagents. Each tool result goes back to the model before its next step. SQLite stores the notes; images stay local. Limits: Inspect before saving. No duplicate saves. Recall is read-only. The API key stays on the local server. 04 Code and example run Code + skill ↓ Repository ↗ Claude Feed trace ↓ Claude Recall trace ↓ Claude Feed run: two tools, one saved reference. 01 · MODEL CALLS TOOL inspect_feed() Result · ready user_note: “I like this small green frog with wide eyes for a playful interface.” the result becomes the next input ↓ exact quote 02 · MODEL CALLS TOOL remember_reference(...) evidence_quote: “I like this small green frog with wide eyes for a playful interface.” Result · saved #1 Tool 1 returns my note. Claude uses an exact quote from it in tool 2, then saves the reference. A later Recall run brings it back. Checked: missing inspection, invented quotes, duplicates, and read-only recall. Local Claude setup · key hidden. 05 Reflection Claude saved the frog image and recalled my original note, but text matching still misses links like “animal character” and “mole”; next I would test semantic retrieval against references whose notes use none of the query words. 06 Disclosure of AI use Visual-AIGC I developed the frog character with step-by-step GPT image generation. I adjusted the poses so the same creature could notice a reference, open its mouth, eat it, think, and return an older idea. 01 · Idle 02 · Notices 03 · Opens 04 · Chews 05 · Full 06 · Thinking 07 · Found it 08 · Returns it Open the Dreamina video Dreamina animation study. GPT process. Dreamina workspace. Code assistant Codex helped me build and debug the agent, tools, and website, and helped translate this draft. I chose the idea, flow, and what to test; I will write the final reflection in my own words. 07 Peer conversation With Stacey With Lilith END OF FILE / 02 Explore final project ideas → Repository ↗ Back to archive ↑",
+        "hash": "349fe31d4d4374d8634898979773179f4df64b4fd1c5bf413780eb7e0ecd2ed0",
+        "observedAt": "2026-10-14T01:22:58.359Z"
+      },
+      "ok": true,
+      "at": "2026-10-14T01:22:58.359Z"
+    },
+    {
+      "action": "save_build",
+      "input": {
+        "week": 2,
+        "title": "Memory Frog",
+        "objective": "A tiny, low-pressure agent for collecting design references—and helping me remember an idea later.",
+        "methods": [
+          "smolagents",
+          "Claude API (Claude + Python tool loop)",
+          "Local Qwen + smolagents",
+          "SQLite for storing notes",
+          "inspect_feed tool",
+          "remember_reference tool",
+          "recall_references tool",
+          "GPT image generation (frog character)",
+          "Dreamina (animation study)",
+          "Codex (code assistant)"
+        ],
+        "themes": [
+          "Memory",
+          "Creativity"
+        ],
+        "sourceUrl": "https://mitmedialab.github.io/agents2026-raine/week02/"
+      },
+      "result": {
+        "id": "raine-w2",
+        "studentId": "raine",
+        "week": 2,
+        "title": "Memory Frog",
+        "objective": "A tiny, low-pressure agent for collecting design references—and helping me remember an idea later.",
+        "methods": [
+          "smolagents",
+          "Claude API (Claude + Python tool loop)",
+          "Local Qwen + smolagents",
+          "SQLite for storing notes",
+          "inspect_feed tool",
+          "remember_reference tool",
+          "recall_references tool",
+          "GPT image generation (frog character)",
+          "Dreamina (animation study)",
+          "Codex (code assistant)"
+        ],
+        "themes": [
+          "Memory",
+          "Creativity"
+        ],
+        "sourceUrl": "https://mitmedialab.github.io/agents2026-raine/week02/",
+        "sourceExcerpt": "Memory Frog — Raine Sha Skip to content Archive Final project About ↗ ← All files FILE 02 / WEEKLY BUILD Working prototype · local agent WEEKLY BUILD · 29 SEPTEMBER 2026 Memory Frog A small place to feed design references and find them again. Design memory Tools smolagents IN THIS FILE 01 Objective 02 Demo 03 Workflow and system 04 Code and example run 05 Reflection 06 Disclosure of AI use 07 Peer conversation Source code ↗ 01 Objective A tiny, low-pressure agent for collecting design references—and helping me remember an idea later. 02 Demo Try Memory Frog ↗ Recorded locally using the Claude API; the agent backend is not publicly deployed. 03 Workflow and system Feed: Image or link + a small note. inspect_feed reads it; remember_reference checks the quote and saves it. Recall: A passing thought → recall_references → up to three original references. Loop: Claude + Python tool loop, or local Qwen + smolagents. Each tool result goes back to the model before its next step. SQLite stores the notes; images stay local. Limits: Inspect before saving. No duplicate saves. Recall is read-only. The API key stays on the local server. 04 Code and example run Code + skill ↓ Repository ↗ Claude Feed trace ↓ Claude Recall trace ↓ Claude Feed run: two tools, one saved reference. 01 · MODEL CALLS TOOL inspect_feed() Result · ready user_note: “I like this small green frog with wide eyes for a playful interface.” the result becomes the next input ↓ exact quote 02 · MODEL CALLS TOOL remember_reference(...) evidence_quote: “I like this small green frog with wide eyes for a playful interface.” Result · saved #1 Tool 1 returns my note. Claude uses an exact quote from it in tool 2, then saves the reference. A later Recall run brings it back. Checked: missing inspection, invented quotes, duplicates, and read-only recall. Local Claude setup · key hidden. 05 Reflection Claude saved the frog image and recalled my original note, but text matching still misses links like “animal character” and “mole”; next I would test semantic retrieval against references whose notes use none of the query words. 06 Disclosure of AI use Visual-AIGC I developed the frog character with step-by-step GPT image generation. I adjusted the poses so the same creature could notice a reference, open its mouth, eat it, think, and return an older idea. 01 · Idle 02 · Notices 03 · Opens 04 · Chews 05 · Full 06 · Thinking 07 · Found it 08 · Returns it Open the Dreamina video Dreamina animation study. GPT process. Dreamina workspace. Code assistant Codex helped me build and debug the agent, tools, and website, and helped translate this draft. I chose the idea, flow, and what to test; I will write the final reflection in my own words. 07 Peer conversation With Stacey With Lilith END OF FILE / 02 Explore final project ideas → Repository ↗ Back to archive ↑",
+        "sourceHash": "349fe31d4d4374d8634898979773179f4df64b4fd1c5bf413780eb7e0ecd2ed0",
+        "observedAt": "2026-10-14T01:22:58.359Z",
+        "origin": "Public website observation"
+      },
+      "ok": true,
+      "at": "2026-10-14T01:23:07.925Z"
+    }
+  ],
+  "status": "saved",
+  "answer": "Your **Week 2 — Memory Frog** build is saved. Here's a summary:\n\n- **Objective:** A tiny, low-pressure agent for collecting design references and helping you remember an idea later.\n- **Methods:** smolagents, Claude API tool loop, local Qwen, SQLite, inspect_feed / remember_reference / recall_references tools, GPT image generation, Dreamina animation, Codex.\n- **Themes:** Memory, Creativity.\n\nStopping here as requested — no pairs or outreach made.",
+  "scores": {
+    "sources_read": 1,
+    "saved_pairs": 0,
+    "imported_builds": 1,
+    "saved_bouquets": 0,
+    "tool_success_rate": 1,
+    "source_validity": 1
+  },
+  "at": "2026-10-14T01:22:53.397Z"
+}

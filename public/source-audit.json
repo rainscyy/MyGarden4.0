@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+  "scope": "13 gardens without indexed weekly builds",
+  "summary": {
+    "reachableWebsites": 13,
+    "unreachableWebsites": 0,
+    "welcomePages": 11,
+    "missedWeeklyDocumentation": 1,
+    "workWithUnspecifiedWeek": 1
+  },
+  "results": [
+    {
+      "studentId": "cate",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-cate/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "eitan",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-eitan/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "elijah",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-elijah/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "eugene",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-eugene/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "hyung",
+      "status": "indexed",
+      "note": "Week 1–4 builds verified and imported from the Markdown files loaded by the week-page dropdowns. Reading the overview alone had missed these records.",
+      "indexedWeeks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-hyung/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "li-chun",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-li-chun/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "meiri",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-meiri/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "olivia",
+      "status": "work-found-week-unassigned",
+      "note": "The public site presents Tangerine with a demo, a project sheet and an architecture diagram. Its week number is not specified, so it is shown separately from the 13 weekly plots.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-olivia/",
+      "homepageStatus": 200,
+      "worksWithoutWeek": [
+        {
+          "title": "Tangerine",
+          "description": "An ambient research companion that follows work context, finds related information, and presents it in a target language.",
+          "url": "https://mitmedialab.github.io/agents2026-olivia/"
+        }
+      ]
+    },
+    {
+      "studentId": "om",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-om/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "river",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-river/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "sandra",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-sandra/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "yufeng",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-yufeng/",
+      "homepageStatus": 200
+    },
+    {
+      "studentId": "yui",
+      "status": "welcome-page",
+      "note": "The listed public website is reachable, but currently shows only a welcome page. No work links or scripts were present; common Week 1–4 paths returned 404. Work on other URLs and enrollment status remain unverified.",
+      "indexedWeeks": [],
+      "checkedAt": "2026-10-14T03:16:46.022022+00:00",
+      "website": "https://mitmedialab.github.io/agents2026-yui/",
+      "homepageStatus": 200
+    }
+  ]
+}

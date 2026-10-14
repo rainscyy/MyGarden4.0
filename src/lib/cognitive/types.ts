@@ -1,0 +1,10 @@
+export type Student={id:string;name:string;website:string;agentName?:string;role?:'student'|'teacher'|'ta';roleSource?:string;avatar?:number;contact?:string;interests?:string[];projectIdeas?:string[];ideaSource?:string;sourceCoverage?:{status:string;note:string;checkedAt:string;worksWithoutWeek?:{title:string;description:string;url:string}[]}};
+export type Build={id:string;studentId:string;week:number;title:string;objective:string;methods:string[];themes:string[];sourceUrl:string;sourceEvidenceUrl?:string;sourceExcerpt:string;sourceHash:string;observedAt:string;origin:string};
+export type Pair={id:string;fromBuild:string;toBuild:string;kind:'related'|'inspiration';reason:string;sourceUrls:string[];createdAt:string;createdBy:string};
+export type Interaction={id:string;actor:string;kind:'water'|'save'|'feedback'|'visit-garden'|'visit-build';target:string;value?:string;at:string};
+export type GardenMessage={id:string;from:string;to:string;content:string;at:string};
+export type TraceStep={action:string;input:unknown;result:unknown;at:string;ok:boolean};
+export type Run={id:string;userId:string;mode:string;goal:string;steps:TraceStep[];status:string;answer:string;scores:Record<string,number>;at:string};
+export type AgentAccount={id:string;studentId:string;name:string;tokenHash:string};
+export type Bouquet={id:string;name:string;buildIds:string[];createdBy:string;createdAt:string};
+export type GardenState={version:number;students:Student[];builds:Build[];pairs:Pair[];bouquets?:Bouquet[];interactions:Interaction[];messages:GardenMessage[];runs:Run[];agents:AgentAccount[]};

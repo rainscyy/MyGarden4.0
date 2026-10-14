@@ -1,0 +1,51 @@
+[
+  {
+    "id": "pattie-maes",
+    "name": "Pattie Maes",
+    "role": "teacher",
+    "website": "https://www.media.mit.edu/people/pattie/overview/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "valdemar-danry",
+    "name": "Valdemar Danry",
+    "role": "teacher",
+    "website": "https://www.valdemardanry.com/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "chitralekha-gupta",
+    "name": "Chitralekha Gupta",
+    "role": "ta",
+    "website": "https://chitralekha.info/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "rachel-poonsiriwong",
+    "name": "Rachel Poonsiriwong",
+    "role": "ta",
+    "website": "https://rpmachine001.org/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "sheer-karny",
+    "name": "Sheer Karny",
+    "role": "ta",
+    "website": "https://sheerkarny.com/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "wazeer-zulfikar",
+    "name": "Wazeer Zulfikar",
+    "role": "ta",
+    "website": "https://www.media.mit.edu/people/wazeer/overview/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  },
+  {
+    "id": "yasith-samaradivakara",
+    "name": "Yasith Samaradivakara",
+    "role": "ta",
+    "website": "https://www.yasithsam.com/",
+    "roleSource": "https://github.com/mitmedialab/agents-class-2026/blob/main/class-agent/shared/course/instructors/instructors.md"
+  }
+]

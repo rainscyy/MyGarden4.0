@@ -10,3 +10,8 @@ node_modules/
 
 # misc
 .DS_Store
+# New classroom environment state
+.garden-data/
+
+# Local incremental compiler cache
+*.tsbuildinfo

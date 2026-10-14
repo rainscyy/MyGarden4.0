@@ -1,0 +1,327 @@
+[
+  {
+    "id": "jad",
+    "interests": [
+      "adaptive learning",
+      "emotional memory",
+      "reflection",
+      "proactive support"
+    ],
+    "projectIdeas": [
+      "chatZPD",
+      "Memento",
+      "Proactive Memento"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "fatak",
+    "interests": [
+      "wearable AI",
+      "critical thinking",
+      "space travel",
+      "astronaut health"
+    ],
+    "projectIdeas": [
+      "Wearable AI for Reasoning and Critical Thinking",
+      "AI Agents for Long-Duration Space Travel",
+      "AI Agents for Precision Health in Space"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "yuxiang",
+    "interests": [
+      "tangible interaction",
+      "collaboration",
+      "haptics",
+      "human–AI negotiation"
+    ],
+    "projectIdeas": [
+      "Agent-Coordinated Physical Collaboration Space",
+      "Human-AI Negotiation through Haptic Interaction",
+      "Grounding Human-AI Interaction in Physical Objects"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "stacey",
+    "interests": [
+      "museum learning",
+      "personalization",
+      "mood reflection",
+      "design critique"
+    ],
+    "projectIdeas": [
+      "Real-Time Museum Learning with AI Agents",
+      "Day Tracking: Visual Moodboards",
+      "Design Critiques: 'Kill Your Darlings?'"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "juan-ruben",
+    "interests": [
+      "neurodegenerative care",
+      "information nuance",
+      "cognitive offloading",
+      "memory"
+    ],
+    "projectIdeas": [
+      "Neurodegenerative Disease Navigation",
+      "Perceptual Friction",
+      "Cognitive Offloading and Memory"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "matti",
+    "interests": [
+      "climate education",
+      "tool generation",
+      "real-time interaction",
+      "trust and provenance"
+    ],
+    "projectIdeas": [
+      "Personalized Climate Change Education",
+      "Automated Tool-Building for Realtime Applications",
+      "Trust, Auditing and UX"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "yanning",
+    "interests": [
+      "adaptive learning",
+      "knowledge gaps",
+      "context management",
+      "gamification"
+    ],
+    "projectIdeas": [
+      "Adaptive Learning Agent",
+      "Browser Tabs and Cognitive Context Agent",
+      "Gamifying Everyday Life"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "leticia",
+    "interests": [
+      "urban exploration",
+      "audio guides",
+      "community connection",
+      "neighborhood narratives"
+    ],
+    "projectIdeas": [
+      "City Explorer",
+      "My City Agent",
+      "Personalised Narratives"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "jack",
+    "interests": [
+      "long-term context",
+      "open-ended agency",
+      "multi-agent collaboration"
+    ],
+    "projectIdeas": [
+      "Where In-Context Learning Runs Out",
+      "Agents With No Goal",
+      "Agent Team"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "hyung",
+    "interests": [
+      "incidental learning",
+      "debate",
+      "critical thinking",
+      "intention awareness"
+    ],
+    "projectIdeas": [
+      "The Random Questioner",
+      "The Agentic Rebel",
+      "The Intention Detector"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "roma",
+    "interests": [
+      "belief evolution",
+      "perspective-taking",
+      "debate",
+      "future self"
+    ],
+    "projectIdeas": [
+      "Hippocampus+",
+      "The Debater",
+      "Wormhole"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "david",
+    "interests": [
+      "process documentation",
+      "design creativity",
+      "research exploration"
+    ],
+    "projectIdeas": [
+      "Documentation Agent",
+      "Creative Design Partner",
+      "Research Partner"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "egemen",
+    "interests": [
+      "future self",
+      "personal reflection",
+      "storytelling",
+      "media bias"
+    ],
+    "projectIdeas": [
+      "Hindsight",
+      "Iz",
+      "Helia"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "raine",
+    "interests": [
+      "creative authorship",
+      "independent judgment",
+      "team understanding",
+      "music composition"
+    ],
+    "projectIdeas": [
+      "Authorship Agent",
+      "Personal Agents, Shared Understanding",
+      "Humming to Composition"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "manasi",
+    "interests": [
+      "older adults",
+      "digital literacy",
+      "decision support",
+      "human agency",
+      "influence"
+    ],
+    "projectIdeas": [
+      "Proactive Digital-Skills Coach",
+      "Decision-Augmenting Agent",
+      "Influence-Meter Agent"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "lilith",
+    "interests": [
+      "screenless hardware",
+      "adaptive interfaces",
+      "modular agents",
+      "collaborative learning"
+    ],
+    "projectIdeas": [
+      "Screen-less agentic hardware",
+      "Modular Agentic OS",
+      "A collaborative learning garden/playground that is managed by agents"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "ray",
+    "interests": [
+      "personal knowledge",
+      "memory reconstruction",
+      "dream visualization"
+    ],
+    "projectIdeas": [
+      "An Agent for Knowledge",
+      "An Agent for Reliving Memory",
+      "An Agent for Recording Dreams"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "sean",
+    "interests": [
+      "self-modeling",
+      "experiential learning",
+      "mental models",
+      "metacognition",
+      "reasoning blind spots"
+    ],
+    "projectIdeas": [
+      "Cognitive Doppelgänger",
+      "Worldsmith",
+      "Unknown Unknowns"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "olivia",
+    "interests": [
+      "language learning",
+      "information overload",
+      "novelty discovery",
+      "AI companionship"
+    ],
+    "projectIdeas": [
+      "Tangerine",
+      "Sift",
+      "Pip"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "yue",
+    "interests": [
+      "bio-inspired design",
+      "wearable exercise",
+      "soft robotics",
+      "fabrication"
+    ],
+    "projectIdeas": [
+      "AI Bio-Inspired Design Agent",
+      "AI Wearable Resistance-Training Agent",
+      "Soft Robotics Knowledge and Innovation Agent"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "quincy",
+    "interests": [
+      "tangible computing",
+      "spatial ideation",
+      "projection",
+      "screenless audio"
+    ],
+    "projectIdeas": [
+      "Agentic Marble Machine",
+      "Projector Mentor",
+      "Screenless Audio Table"
+    ],
+    "ideaSource": "User-provided course directory"
+  },
+  {
+    "id": "mateo",
+    "interests": [
+      "acoustic intelligence",
+      "digital twins",
+      "interviews",
+      "memory support"
+    ],
+    "projectIdeas": [],
+    "ideaSource": "User-provided course directory"
+  }
+]

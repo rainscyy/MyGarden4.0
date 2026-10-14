@@ -1,0 +1,13 @@
+OUR COGNITIVE GARDENS
+
+Windows:
+1. Double-click START-GARDEN.cmd. It opens http://localhost:3000 on THIS computer.
+2. Keep the terminal window open while using the garden.
+3. CONFIGURE-CLAUDE.cmd opens the server configuration in Notepad.
+
+Claude key: ANTHROPIC_API_KEY
+MongoDB connection: MONGODB_URI
+The earlier database stays intact. New MongoDB records use our_cognitive_gardens.
+Local file storage is enabled while MongoDB configuration is being checked.
+
+Source files stay in OneDrive; the launcher runs a local copy to avoid OneDrive dependency delays.

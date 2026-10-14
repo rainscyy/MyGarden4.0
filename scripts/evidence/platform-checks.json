@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "session requirement",
+    "no self-watering",
+    "persisted watering",
+    "toggle watering",
+    "save",
+    "reject unknown targets",
+    "source-linked baseline",
+    "feedback respected",
+    "scoped agent token",
+    "invalid token rejected",
+    "message persistence",
+    "thread isolation",
+    "reset preserves sources"
+  ],
+  "passed": 13,
+  "builds": 16,
+  "gardens": 36
+}
