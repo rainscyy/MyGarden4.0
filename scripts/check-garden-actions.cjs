@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),ts=require('typescript');
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'garden-actions-'));
+for(const file of ['actions','environment','course'])fs.writeFileSync(path.join(tmp,file+'.js'),ts.transpileModule(fs.readFileSync('src/lib/cognitive/'+file+'.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText);
+const {prepareGardenAction:prepare,resolveGardenAction:resolve}=require(path.join(tmp,'actions.js')),{readCourseResource,listCourseResources}=require(path.join(tmp,'course.js'));
+(async()=>{
+ const s={students:[{id:'a'},{id:'b'},{id:'t',role:'teacher'}],builds:[{id:'b1',studentId:'b',title:'Build'}],interactions:[],messages:[],pairs:[]};
+ const note=prepare(s,'a',{kind:'message',target:'b',content:'Can we compare our projects?'});
+ assert.equal(s.messages.length,0);assert.throws(()=>resolve(s,'b',note.id,true));resolve(s,'a',note.id,true);resolve(s,'a',note.id,true);assert.equal(s.messages.length,1);assert.equal(s.messages[0].to,'b');
+ const dismiss=prepare(s,'a',{kind:'message',target:'b',content:'No send'});resolve(s,'a',dismiss.id,false);resolve(s,'a',dismiss.id,true);assert.equal(s.messages.length,1);
+ const expired=prepare(s,'a',{kind:'message',target:'b',content:'Expired'});expired.expiresAt=0;assert.throws(()=>resolve(s,'a',expired.id,true));
+ for(let i=0;i<2;i++){const water=prepare(s,'a',{kind:'water',target:'b1'});resolve(s,'a',water.id,true);}assert.equal(s.interactions.length,1);
+ assert.throws(()=>prepare(s,'a',{kind:'water',target:'missing'}));assert.throws(()=>prepare(s,'a',{kind:'flower',target:'b',content:'Thanks'}));
+ const flower=prepare(s,'a',{kind:'flower',target:'t',content:'Thanks for the feedback'});resolve(s,'a',flower.id,true);assert.match(s.messages[1].content,/🌼/);
+ const profile=prepare(s,'a',{kind:'profile',target:'b',interests:['Interaction design']});resolve(s,'a',profile.id,true);assert.deepEqual(s.students[0].interests,['Interaction design']);assert.equal(s.students[1].interests,undefined);
+ let reads=0;const mock=async(url,opts)=>{assert.ok(url.startsWith('https://cognitive-agents.media.mit.edu/api/v1/course/resources'));assert.equal(opts.credentials,'omit');assert.equal(opts.redirect,'error');assert.equal(opts.headers.Authorization,undefined);reads++;return new Response(url.includes('/content?')?'Public schedule text':JSON.stringify([{uri:'course://schedule',title:'Schedule',status:'provisional',media_type:'text/markdown'},{uri:'course://pdf',title:'PDF',media_type:'application/pdf'}]));};
+ const resource=await readCourseResource('course://schedule',mock);assert.equal(resource.status,'provisional');assert.equal(resource.content,'Public schedule text');assert.ok(resource.sourceUrl&&resource.fetchedAt);
+ await assert.rejects(readCourseResource('https://private.test',mock));const before=reads;const pdf=await readCourseResource('course://pdf',mock);assert.equal(reads,before+1);assert.match(pdf.content,/not been read/);
+ await assert.rejects(listCourseResources(async()=>new Response('x',{status:503})));
+ await assert.rejects(listCourseResources(async()=>new Response('x'.repeat(200001))));
+ console.log('Passed: draft does not send, owner isolation, retry idempotence, dismissal, expiry, watering, flowers, own-profile edits; public course allowlist, anonymous reads, provisional status, unread PDFs, outages and size bounds.');
+ fs.rmSync(tmp,{recursive:true});
+})().catch(e=>{console.error(e);process.exit(1)});

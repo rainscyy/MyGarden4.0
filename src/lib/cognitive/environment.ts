@@ -43,7 +43,7 @@ export function interact(s:GardenState,actor:string,kind:string,target:string,va
   s.interactions.push({id:id(),actor,kind,target,at:new Date().toISOString()});return;
  }
  if(!['water','save','feedback'].includes(kind))throw new Error('Unknown interaction.');
- const build=s.builds.find(b=>b.id===target),pair=s.pairs.find(p=>p.id===target);
+ const build=s.builds.find(b=>b.id===target),pair=s.pairs.find(p=>p.id===target)||s.learningPairs?.find(p=>p.id===target&&p.createdBy===actor);
  if(!build&&!pair)throw new Error('This work is not in the garden.');
  if(kind==='water'&&(!build||build.studentId===actor))throw new Error('Water another classmate’s work.');
  if(kind==='feedback'&&!['inspiring','not-relevant','want-to-talk'].includes(value||''))throw new Error('Choose a feedback option.');

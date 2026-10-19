@@ -1,3 +1,6 @@
+import {resolveGardenAction} from '@/lib/cognitive/actions';
+import {githubConfigured} from '@/lib/cognitive/github';
+import {saveCheckIn,removeCheckIn,saveLearningPair} from '@/lib/cognitive/growth';
 import crypto from 'node:crypto';
 import {NextResponse} from 'next/server';
 import {readState,mutateState,legacySummary} from '@/lib/cognitive/storage';
@@ -15,11 +18,12 @@ export async function GET(req:Request){
  try{
   const state=await readState();const actor=req.headers.get('authorization')?requestActor(req,state).actor:sessionActor(req);
   if(new URL(req.url).searchParams.get('legacy')==='1')return NextResponse.json(await legacySummary());
-  return NextResponse.json({...gardenView(state),runs:state.runs.filter(r=>r.userId===actor),interactions:state.interactions.filter(i=>i.kind!=='feedback'||i.actor===actor),messages:state.messages.filter(m=>m.from===actor||m.to===actor),viewer:actor,requiresInvite:!demoSessionsAllowed()},{headers:{'Cache-Control':'private, no-store'}});
+  return NextResponse.json({...gardenView(state),actionDrafts:(state.actionDrafts||[]).filter(d=>d.actor===actor),runs:state.runs.filter(r=>r.userId===actor),interactions:state.interactions.filter(i=>i.kind!=='feedback'||i.actor===actor),messages:state.messages.filter(m=>m.from===actor||m.to===actor),learningPairs:(state.learningPairs||[]).filter(p=>p.createdBy===actor),viewer:actor,githubSignIn:githubConfigured(),requiresInvite:!demoSessionsAllowed()},{headers:{'Cache-Control':'private, no-store'}});
  }catch{return NextResponse.json({error:'The garden store is unavailable. Check the database connection or use GARDEN_STORAGE=file for local development.'},{status:503});}
 }
 export async function POST(req:Request){
  try{
+  const origin=req.headers.get('origin');const requestUrl=new URL(req.url);const hostOrigin=new URL(req.url);hostOrigin.host=req.headers.get('host')||requestUrl.host;if(origin&&origin!==requestUrl.origin&&origin!==hostOrigin.origin)throw Error('Open the garden directly to continue.');
   const body=await req.json();
   if(body.action==='logout'){const response=NextResponse.json({ok:true});response.cookies.set('garden_session','',{httpOnly:true,sameSite:'strict',path:'/',maxAge:0});return response;}
   if(body.action==='session'){
@@ -50,6 +54,10 @@ export async function POST(req:Request){
   }
   if(body.action==='plant_build'){const observation=await observePublicSource(state,actor,String(body.sourceUrl||''));return NextResponse.json(await mutateState(s=>upsertObservedBuild(s,actor,body,observation)));}
   const result=await mutateState(s=>{
+   if(body.action==='resolve_action'){if(agent)throw Error('Review this draft in your garden before applying it.');return resolveGardenAction(s,actor,String(body.id),body.approve===true);}
+   if(body.action==='check_in')return saveCheckIn(s,actor,body,agent);
+   if(body.action==='delete_check_in')return removeCheckIn(s,actor,String(body.id||''));
+   if(body.action==='learning_pair')return saveLearningPair(s,actor,body);
    if(body.action==='interact'){if(agent&&String(body.kind).startsWith('visit-'))throw new Error('Garden visits require a human session.');interact(s,actor,body.kind,body.target,body.value);return {ok:true};}
    if(body.action==='message')return postMessage(s,actor,body.to,body.content);
    if(body.action==='baseline')return baselineRun(s,actor);
@@ -66,7 +74,7 @@ export async function POST(req:Request){
    }
    if(body.action==='reset'){
     if(agent)throw new Error('Only a human session can reset a garden.');
-    s.pairs=s.pairs.filter(p=>!s.builds.some(b=>b.id===p.fromBuild&&b.studentId===actor));s.interactions=s.interactions.filter(i=>i.actor!==actor);return {ok:true};
+    s.pairs=s.pairs.filter(p=>!s.builds.some(b=>b.id===p.fromBuild&&b.studentId===actor));s.interactions=s.interactions.filter(i=>i.actor!==actor);s.learningPairs=(s.learningPairs||[]).filter(p=>p.createdBy!==actor);return {ok:true};
    }
    throw new Error('Unknown garden action.');
   });

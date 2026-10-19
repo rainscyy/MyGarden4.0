@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),ts=require('typescript');
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'garden-github-'));
+fs.writeFileSync(path.join(tmp,'github.cjs'),ts.transpileModule(fs.readFileSync('src/lib/cognitive/github.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText);
+const {openLogin,sealLogin,githubGardens,courseRepository}=require(path.join(tmp,'github.cjs'));
+process.env.GARDEN_SESSION_SECRET='isolated-unit-test-secret';
+(async()=>{const token=sealLogin({purpose:'oauth',state:'random',verifier:'secret'});assert.equal(openLogin(token).purpose,'oauth');assert.throws(()=>openLogin(token+'x'));assert.throws(()=>openLogin(token+'.extra'));
+const now=Date.now;Date.now=()=>now()+601000;assert.throws(()=>openLogin(token));Date.now=now;
+const students=[{id:'alice',website:'https://mitmedialab.github.io/agents2026-alice/'},{id:'bob',website:'https://mitmedialab.github.io/agents2026-bob/'},{id:'mallory',website:'https://mitmedialab.github.io.evil.test/agents2026-mallory/'}];
+assert.equal(courseRepository(students[2]),null);
+const calls=[];const response=await githubGardens('private-test-token',students,async url=>{calls.push(url);return new Response(JSON.stringify(url.endsWith('/user')?{id:123,login:'not-a-roster-name'}:[{full_name:'mitmedialab/agents2026-alice',permissions:{push:true}},{full_name:'mitmedialab/agents2026-bob',permissions:{pull:true}},{full_name:'mallory/agents2026-bob',permissions:{push:true}}]),{status:200});});
+assert.deepEqual(response.actors,['alice']);assert.equal(response.githubId,123);assert.equal(calls.length,2);
+await assert.rejects(githubGardens('bad',students,async()=>new Response('{}',{status:401})));
+console.log('GitHub checks passed: tamper/expiry, exact repository matching, write access, read-only rejection, account identity, API failure.');fs.rmSync(tmp,{recursive:true});})().catch(e=>{console.error(e);process.exit(1)});

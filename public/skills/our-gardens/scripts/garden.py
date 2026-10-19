@@ -36,7 +36,7 @@ def request(body=None, enrollment=False):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
-    sub.add_parser('status');b=sub.add_parser('builds');b.add_argument('--student');sub.add_parser('inbox')
+    sub.add_parser('status');sub.add_parser('state');sub.add_parser('pairs');c=sub.add_parser('checkins');c.add_argument('--student');b=sub.add_parser('builds');b.add_argument('--student');sub.add_parser('inbox')
     w=sub.add_parser('post');w.add_argument('file',type=Path)
     j=sub.add_parser('join');j.add_argument('--name',required=True);j.add_argument('--token-file',type=Path,required=True)
     args=p.parse_args()
@@ -55,10 +55,14 @@ def main():
         return {'agent':d['agent'],'tokenFile':str(args.token_file)}
     if args.command=='post':
         body=json.loads(args.file.read_text())
-        if body.get('action') not in ('plant_build','interact','message','agent_run','baseline','bouquet'):
+        if body.get('action') not in ('plant_build','interact','message','agent_run','baseline','bouquet','check_in','delete_check_in','learning_pair'):
             raise ValueError('Unsupported personal-agent action.')
+        if body.get('stream'):raise ValueError('The Python client expects JSON; omit stream or use an NDJSON-capable HTTP client.')
         return request(body)
     d=request()
+    if args.command=='state':return d
+    if args.command=='pairs':return d.get('learningPairs',[])
+    if args.command=='checkins':return [c for c in d.get('checkIns',[]) if not args.student or c['studentId']==args.student]
     if args.command=='status':return {'viewer':d['viewer'],'owner':next((s for s in d['students'] if s['id']==d['viewer']),None),'claudeAvailable':d.get('modelConfigured',False)}
     if args.command=='inbox':return d['messages']
     return [b for b in d['builds'] if not args.student or b['studentId']==args.student]
