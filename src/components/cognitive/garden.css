@@ -80,3 +80,14 @@
 .cg-app .student-join-banner{font-size:13px;line-height:1.6}
 .cg-app .student-join-banner a{font-family:inherit}
 .cg-app .modal-hint,.cg-app .byline,.cg-app .field-note{font-size:12px;line-height:1.6}
+
+/* Sign-in is a reading/form surface; retain pixel lettering only in headings. */
+.cg-app.join-page .garden-modal{font-family:Arial,Helvetica,sans-serif;color:#394333}
+.cg-app.join-page p,.cg-app.join-page a,.cg-app.join-page summary,.cg-app.join-page label,.cg-app.join-page input,.cg-app.join-page button{font-family:Arial,Helvetica,sans-serif;letter-spacing:normal;font-size:16px;line-height:1.6}
+.cg-app.join-page .modal-hint{font-size:14px;line-height:1.65;color:#4e5847}
+.cg-app.join-page .primary{font-size:15px;font-weight:600;line-height:1.4;padding:12px 18px}
+.cg-app.join-page summary{font-size:15px;font-weight:600;cursor:pointer}
+.cg-app.join-page .garden-modal>a:first-child{font-size:14px}
+.cg-app.join-page h1{font-size:28px;line-height:1.4}
+.cg-app.join-page h2{font-size:23px;line-height:1.4}
+.cg-app.join-page h1,.cg-app.join-page h2{font-family:GardenPixel,monospace}
