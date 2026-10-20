@@ -71,3 +71,12 @@
 .cg-app [data-agent-dialog] .agent-prose pre{overflow:auto;padding:12px;background:#d4dba8}
 .cg-app [data-agent-dialog] .agent-prose blockquote{margin:0 0 1em;padding-left:12px;border-left:3px solid #879564}
 .cg-app [data-agent-dialog] .modal-hint{font-size:12px;margin-top:14px}
+
+/* Readable body copy across notices, profiles, recommendations and forms. */
+.cg-app p,.cg-app textarea,.cg-app input,.cg-app .source-text,.cg-app .draft-content,.cg-app .growth-invite,.cg-app .student-join-banner,.cg-app .field-note,.cg-app .contact-info,.cg-app .pair-evidence,.cg-app .pair-sources,.cg-app .inbox-list,.cg-app .trace-list,.cg-app .empty-state{font-family:GardenText,ui-monospace,monospace;font-size:15px;line-height:1.7;letter-spacing:-.2px;color:#394333}
+.cg-app .growth-invite p{margin:8px 0;overflow-wrap:anywhere}
+.cg-app .growth-invite strong{font-weight:650}
+.cg-app .growth-invite small,.cg-app .source-coverage small{font-family:GardenText,ui-monospace,monospace;font-size:12px;line-height:1.6}
+.cg-app .student-join-banner{font-size:13px;line-height:1.6}
+.cg-app .student-join-banner a{font-family:inherit}
+.cg-app .modal-hint,.cg-app .byline,.cg-app .field-note{font-size:12px;line-height:1.6}
