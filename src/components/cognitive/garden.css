@@ -54,3 +54,20 @@
 /* Keep the student notice above the map, including when navigation wraps. */
 .view-forest{display:flex;flex-direction:column}.view-forest>.cg-header,.view-forest>.student-join-banner{flex-shrink:0}.view-forest .cg-main{position:relative;inset:auto;flex:1;min-height:0;width:100%}.view-forest .forest-layout{inset:0 12px 12px}
 @media(max-width:740px){.view-forest .forest-layout{inset:0 7px 7px}.student-join-banner{margin-top:0;padding:6px 10px;gap:4px 14px}}
+
+/* Keep pixel chrome; long-form agent text uses a readable retro monospace. */
+@font-face{font-family:GardenText;src:url('/fonts/chivo-mono.ttf') format('truetype');font-display:swap;font-weight:100 900}
+.cg-app [data-agent-dialog] .agent-welcome,.cg-app [data-agent-dialog] textarea,.cg-app [data-agent-dialog] .agent-prose,.cg-app [data-agent-dialog] .agent-progress,.cg-app [data-agent-dialog] .agent-error,.cg-app [data-agent-dialog] .modal-hint,.cg-app [data-agent-dialog] .draft-content{font-family:GardenText,ui-monospace,monospace;font-size:15px;line-height:1.7;font-weight:400;letter-spacing:-.2px;color:#394333}
+.cg-app [data-agent-dialog] textarea{min-height:132px;padding:12px;resize:vertical}
+.cg-app [data-agent-dialog] .agent-welcome{margin:16px 0 20px}
+.cg-app [data-agent-dialog] .agent-prose p{font:inherit;white-space:normal;margin:0 0 1em;overflow-wrap:anywhere}
+.cg-app [data-agent-dialog] .agent-prose>:last-child{margin-bottom:0}
+.cg-app [data-agent-dialog] .agent-prose a{color:#315b38;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;font-weight:600}
+.cg-app [data-agent-dialog] .agent-prose strong{font-weight:650}
+.cg-app [data-agent-dialog] .agent-prose ul,.cg-app [data-agent-dialog] .agent-prose ol{padding-left:1.5em;margin:0 0 1em}
+.cg-app [data-agent-dialog] .agent-prose li+li{margin-top:.5em}
+.cg-app [data-agent-dialog] .agent-prose h1,.cg-app [data-agent-dialog] .agent-prose h2,.cg-app [data-agent-dialog] .agent-prose h3{font:600 17px/1.5 GardenText,monospace;margin:1em 0 .5em}
+.cg-app [data-agent-dialog] .agent-prose code{font:inherit;background:#d4dba8;padding:1px 3px}
+.cg-app [data-agent-dialog] .agent-prose pre{overflow:auto;padding:12px;background:#d4dba8}
+.cg-app [data-agent-dialog] .agent-prose blockquote{margin:0 0 1em;padding-left:12px;border-left:3px solid #879564}
+.cg-app [data-agent-dialog] .modal-hint{font-size:12px;margin-top:14px}

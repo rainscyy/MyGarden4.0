@@ -1,3 +1,4 @@
+import {traceGardenRun,startGardenTool,maskTelemetry} from './telemetry';
 import {listCourseResources,readCourseResource} from './course';
 import {prepareGardenAction} from './actions';
 import {recentCheckIns,saveLearningPair} from './growth';
@@ -23,11 +24,14 @@ const tools:Anthropic.Tool[]=[
  {name:'save_pair',description:'Save a source-supported connection from one of the current user’s builds to a different classmate’s build. Cite exactly the two stored build source URLs, explain a concrete shared method or useful difference, and specify related or inspiration. Self-pairs, duplicates, rejected pairs and unsupported URLs fail and return an error.',input_schema:{type:'object',properties:{fromBuild:{type:'string'},toBuild:{type:'string'},kind:{type:'string',enum:['related','inspiration']},reason:{type:'string'},sourceUrls:{type:'array',items:{type:'string'},minItems:2,maxItems:2}},required:['fromBuild','toBuild','reason','sourceUrls']}}
 ];
 export async function runGardener(actor:string,goal:string,clientOverride?:Anthropic,onProgress?:(message:string)=>void):Promise<Run>{
+ return traceGardenRun(actor,goal,traceId=>runGardenerCore(actor,goal,clientOverride,onProgress,traceId));
+}
+async function runGardenerCore(actor:string,goal:string,clientOverride?:Anthropic,onProgress?:(message:string)=>void,traceId?:string):Promise<Run>{
  if(!clientOverride&&!process.env.ANTHROPIC_API_KEY)throw new Error('Claude needs a server API key before the gardener can run.');
  if(!goal.trim())throw new Error('Tell the gardener what you want to explore.');
  needStudent(await readState(),actor);
  const client=clientOverride||new Anthropic({apiKey:process.env.ANTHROPIC_API_KEY,maxRetries:1,timeout:90000});
- const run:Run={id:crypto.randomUUID(),userId:actor,mode:'claude',goal,steps:[],status:'running',answer:'',scores:{},at:new Date().toISOString()};
+ const run:Run={id:crypto.randomUUID(),...(traceId?{traceId}:{}),userId:actor,mode:'claude',goal,steps:[],status:'running',answer:'',scores:{},at:new Date().toISOString()};
  const messages:Anthropic.MessageParam[]=[{role:'user',content:goal}];const started=Date.now();
  const observations=new Map<string,Awaited<ReturnType<typeof observePublicSource>>>();const seen=new Set<string>();const seenCheckIns=new Map<string,string>();let prepared=0,savedLearning=0,saved=0,savedBuilds=0,savedBouquets=0,toolCount=0;
  try{
@@ -45,6 +49,7 @@ export async function runGardener(actor:string,goal:string,clientOverride?:Anthr
     const progress:Record<string,string>={read_feedback:'Checking your previous recommendations and feedback…',query_builds:'Finding classmates’ indexed projects…',read_source:'Reading the original project evidence…',save_pair:'Saving a source-backed recommendation…',save_bouquet:'Saving the shared-theme group…',read_public_source:'Reading your public website…',save_build:'Saving the verified build…'};
     onProgress?.(progress[call.name]||'Working on your request…');
     const input=call.input as Record<string,unknown>;let result:unknown;let ok=true;
+    const toolSpan=startGardenTool(call.name,input,call.id);
     try{
      const s=await readState();
      if(call.name==='read_garden_context'){const me=needStudent(s,actor);result={self:{id:me.id,name:me.name,interests:me.interests,projectIdeas:me.projectIdeas},people:s.students.map(p=>({id:p.id,name:p.name,role:p.role||'student'})),builds:s.builds.filter(b=>b.studentId===actor).map(({sourceExcerpt,...b})=>b)};}
@@ -65,6 +70,7 @@ export async function runGardener(actor:string,goal:string,clientOverride?:Anthr
       result=await mutateState(state=>savePair(state,input as Parameters<typeof savePair>[1],actor));saved++;
      }else throw new Error('Unknown tool.');
     }catch(e){ok=false;result={error:e instanceof Error?e.message:'Tool failed.'};}
+    toolSpan?.update({output:result,level:ok?'DEFAULT':'ERROR',...(!ok?{statusMessage:maskTelemetry(String((result as {error:string}).error))}:{})}).end();
     const step:TraceStep={action:call.name,input,result,ok,at:new Date().toISOString()};run.steps.push(step);
     if(!ok)onProgress?.('A tool could not complete; checking whether another approach is possible…');
     results.push({type:'tool_result',tool_use_id:call.id,is_error:!ok,content:JSON.stringify(result)});

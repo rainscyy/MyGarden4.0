@@ -7,6 +7,7 @@ import {readState,mutateState,legacySummary} from '@/lib/cognitive/storage';
 import {gardenView,interact,postMessage,baselineRun,needStudent,saveBouquet} from '@/lib/cognitive/environment';
 import {requestActor,sessionActor,sessionValue,hashToken,demoSessionsAllowed,invitationActor} from '@/lib/cognitive/auth';
 import {runGardener} from '@/lib/cognitive/agent';
+import {traceCheckIn} from '@/lib/cognitive/telemetry';
 import {observePublicSource,upsertObservedBuild} from '@/lib/cognitive/sources';
 function registerAgent(s:import('@/lib/cognitive/types').GardenState,actor:string,name:unknown){
  if(typeof name!=='string'||!name.trim())throw new Error('Give your agent a name.');
@@ -53,9 +54,9 @@ export async function POST(req:Request){
    return new Response(stream,{headers:{'Content-Type':'application/x-ndjson; charset=utf-8','Cache-Control':'no-cache, no-transform','X-Accel-Buffering':'no'}});
   }
   if(body.action==='plant_build'){const observation=await observePublicSource(state,actor,String(body.sourceUrl||''));return NextResponse.json(await mutateState(s=>upsertObservedBuild(s,actor,body,observation)));}
+  if(body.action==='check_in')return NextResponse.json(await traceCheckIn(actor,Boolean(agent),body,()=>mutateState(s=>saveCheckIn(s,actor,body,agent))));
   const result=await mutateState(s=>{
    if(body.action==='resolve_action'){if(agent)throw Error('Review this draft in your garden before applying it.');return resolveGardenAction(s,actor,String(body.id),body.approve===true);}
-   if(body.action==='check_in')return saveCheckIn(s,actor,body,agent);
    if(body.action==='delete_check_in')return removeCheckIn(s,actor,String(body.id||''));
    if(body.action==='learning_pair')return saveLearningPair(s,actor,body);
    if(body.action==='interact'){if(agent&&String(body.kind).startsWith('visit-'))throw new Error('Garden visits require a human session.');interact(s,actor,body.kind,body.target,body.value);return {ok:true};}

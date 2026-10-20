@@ -1,0 +1,20 @@
+{
+  "kind": "instrumentation-test",
+  "provider": "mock HTTP responses through real Anthropic SDK streaming",
+  "paidModelCalls": 0,
+  "liveGardenMutations": 0,
+  "traceUrl": "https://us.cloud.langfuse.com/project/cmvg0ns7202uqad0j5lnk4x2f/traces/1201e0e2ffd5cee515147ff1b3c218b2",
+  "readBackVerified": true,
+  "checks": {
+    "rootAgent": 1,
+    "generations": 3,
+    "retrieverCalls": 2,
+    "handledToolErrors": 1,
+    "parentChildNesting": true,
+    "generationInputsOutputsPresent": true,
+    "modelAndUsagePresent": true,
+    "dummyCredentialRedacted": true,
+    "businessStatePreserved": true
+  },
+  "note": "Synthetic usage and outputs verify instrumentation only. Not a Week 5 evaluation trial."
+}

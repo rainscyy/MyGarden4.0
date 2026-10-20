@@ -1,0 +1,11 @@
+# Week 5 build-import evaluation
+
+Run `scripts/evaluation/run-build-import.cjs` from the app root. It prepares and validates inputs without model calls by default. Add `--live` to run three paid Claude trials. Set `GARDEN_ENV_FILE` to your private environment file and `GARDEN_EVAL_FIXTURE` to the fixture directory. Never commit credentials.
+
+The fixture directory contains `definition.json` (owner, week, build ID, source URL, prompt, accepted heading variants and exact opening summary), `public-snapshot.json` (captured public classroom state), and `source.html` (the frozen real public page). The runner preserves the existing Garden policy and tools. Only the selected page fetch is replayed; Claude and Langfuse calls are real. Source network latency is therefore excluded. Private histories are empty fixture collections, not claims about actual private histories.
+
+Each trial restores the same initial state in an isolated file store. Production MongoDB is never accessed. The scorer checks the requested saved record, exact title/summary, source integrity, read-before-save order, one successful save, and unchanged unrelated state. A failure is retained and not silently retried; the production SDK's one transport retry remains enabled. Provider-wide authentication/billing/rate failures stop the remaining trials.
+
+`task_completion` is 1 only when every state and action constraint passes. `completion_time_seconds` covers the actual agent request through completion and trace flush, excluding reset and grading. Output quality is N/A for exact copying; inferred methods/themes are not semantically graded by this task. Three successes describe these three trials, not a precise population success probability.
+
+Langfuse v6's experiment runner creates one experiment per trial and records programmatic scores. The Garden agent appears within each experiment trace, with model generations and real tool execution. Full before/after states and results are saved under the ignored fixture directory. Run `node scripts/evaluation/check-build-import-scorer.cjs` to verify that the scorer rejects duplicates, unrelated edits, incorrect summaries, provenance mismatches, and invalid action order. Its synthetic fixtures test only the scoring code and are excluded from agent evaluation results.
