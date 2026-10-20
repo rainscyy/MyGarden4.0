@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -40 48 48" shape-rendering="crispEdges">
+<title>Our Gardens pixel tree</title>
+<ellipse cx="0" cy="3" rx="14" ry="5" fill="#6b965c" opacity=".4"/><path d="M-3-1V-22H4V-2H8V2H-6V-1Z" fill="#94755d"/><path d="M-14-13H-18V-26H-15V-34H-9V-39H3V-37H11V-33H16V-26H19V-15H15V-10H6V-8H-8V-10H-14Z" fill="#4d7959"/><path d="M-14-17V-29H-10V-35H-3V-38H3V-34H10V-29H15V-17H10V-13H-7V-17Z" fill="#81a66b"/><path d="M-9-27V-32H-3V-35H3V-32H8V-26H3V-23H-4V-26Z M-12-21H-8V-18H-12Z M7-19H11V-16H7Z" fill="#adc17a"/><path d="M0-9v9h2v-11Z M-3-3h2v3h-2Z" fill="#715d45"/><path d="M-14-27h4v3h-4Z M-6-19h5v3h-5Z M8-28h4v3H8Z M2-13h5v2H2Z" fill="#96b875"/><path d="M-12-22H-7V-17H-12Z M6-24H11V-19H6Z M0-13H5V-8H0Z" fill="#ecb47c"/>
+</svg>
