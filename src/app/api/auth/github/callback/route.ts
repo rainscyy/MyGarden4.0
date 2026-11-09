@@ -11,9 +11,10 @@ export async function GET(req:NextRequest){
   const code=req.nextUrl.searchParams.get('code');if(!code||req.nextUrl.searchParams.has('error'))throw Error('cancelled');
   const tokenResponse=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify({client_id:process.env.GITHUB_CLIENT_ID,client_secret:process.env.GITHUB_CLIENT_SECRET,code,redirect_uri:origin+'/api/auth/github/callback',code_verifier:saved.verifier}),cache:'no-store',signal:AbortSignal.timeout(15000)});
   const token=await tokenResponse.json();if(!tokenResponse.ok||!token.access_token)throw Error('token');
-  const state=await readState();const verified=await githubGardens(token.access_token,state.students);
+  const state=await readState();const verified=await githubGardens(token.access_token,state.students,fetch,state.githubLinks);
   // The GitHub token is only used during this request, never stored or exposed.
-  if(!verified.actors.length){response=NextResponse.redirect(origin+'/join?error=repository');}
+  if(!verified.actors.length){response=NextResponse.redirect(origin+'/join?link=1');
+   response.cookies.set('garden_github_link',sealLogin({purpose:'link',githubId:verified.githubId,login:verified.login}),{httpOnly:true,secure:origin.startsWith('https:'),sameSite:'lax',path:'/',maxAge:600});}
   else if(verified.actors.length===1){response=NextResponse.redirect(origin+'/?joined=1');response.cookies.set('garden_session',sessionValue(verified.actors[0]),{httpOnly:true,secure:origin.startsWith('https:'),sameSite:'lax',path:'/',maxAge:7*86400});}
   else{response=NextResponse.redirect(origin+'/join');response.cookies.set('garden_github_choices',sealLogin({purpose:'choose',...verified}),{httpOnly:true,secure:origin.startsWith('https:'),sameSite:'lax',path:'/',maxAge:600});}
  }catch{response=NextResponse.redirect(origin+'/join?error=signin');}

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),ts=require('typescript');
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'garden-github-'));
 fs.writeFileSync(path.join(tmp,'github.cjs'),ts.transpileModule(fs.readFileSync('src/lib/cognitive/github.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText);
-const {openLogin,sealLogin,githubGardens,courseRepository}=require(path.join(tmp,'github.cjs'));
+const {openLogin,sealLogin,linkGarden,githubGardens,courseRepository}=require(path.join(tmp,'github.cjs'));
 process.env.GARDEN_SESSION_SECRET='isolated-unit-test-secret';
 (async()=>{const token=sealLogin({purpose:'oauth',state:'random',verifier:'secret'});assert.equal(openLogin(token).purpose,'oauth');assert.throws(()=>openLogin(token+'x'));assert.throws(()=>openLogin(token+'.extra'));
 const now=Date.now;Date.now=()=>now()+601000;assert.throws(()=>openLogin(token));Date.now=now;
@@ -14,5 +14,16 @@ for (const [id, expected] of [[233789321,['raine']], [123,[]]]) {
  const result = await githubGardens('test',[raine],async url => Response.json(url.endsWith('/user') ? {id,login:'rainscyy'} : []));
  assert.deepEqual(result.actors,expected);
 }
+const state={students};
+linkGarden(state,'alice',456);
+linkGarden(state,'alice',456);
+assert.throws(()=>linkGarden(state,'alice',789));
+assert.throws(()=>linkGarden(state,'bob',456));
+assert.throws(()=>linkGarden(state,'absent',789));
+const linked=await githubGardens('test',students,async url=>{
+ assert.ok(url.endsWith('/user'));
+ return Response.json({id:456,login:'renamed'});
+},state.githubLinks);
+assert.deepEqual(linked.actors,['alice']);
 await assert.rejects(githubGardens('bad',students,async()=>new Response('{}',{status:401})));
 console.log('GitHub checks passed: tamper/expiry, exact repository matching, write access, read-only rejection, account identity, API failure.');fs.rmSync(tmp,{recursive:true});})().catch(e=>{console.error(e);process.exit(1)});

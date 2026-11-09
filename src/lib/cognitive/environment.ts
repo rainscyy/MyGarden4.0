@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import type {GardenState,Build,Pair} from './types';
 const id=()=>crypto.randomUUID();
 export function needStudent(s:GardenState,actor:string){const student=s.students.find(x=>x.id===actor);if(!student)throw new Error('Choose a garden first.');return student;}
-export function gardenView(s:GardenState){return {...s,agents:s.agents.map(({tokenHash,...a})=>a),modelConfigured:!!process.env.ANTHROPIC_API_KEY,storage:process.env.GARDEN_STORAGE==='file'||!process.env.MONGODB_URI?'file':'mongodb'};}
+export function gardenView({githubLinks: _privateLinks,...s}:GardenState){return {...s,agents:s.agents.map(({tokenHash,...a})=>a),modelConfigured:!!process.env.ANTHROPIC_API_KEY,storage:process.env.GARDEN_STORAGE==='file'||!process.env.MONGODB_URI?'file':'mongodb'};}
 export function buildTokens(b:Build){return new Set([...b.themes,...b.methods].map(x=>x.toLowerCase()));}
 export function suggestPairs(s:GardenState,actor:string,theme='',history=true){
  needStudent(s,actor);
