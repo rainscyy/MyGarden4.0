@@ -9,5 +9,10 @@ const students=[{id:'alice',website:'https://mitmedialab.github.io/agents2026-al
 assert.equal(courseRepository(students[2]),null);
 const calls=[];const response=await githubGardens('private-test-token',students,async url=>{calls.push(url);return new Response(JSON.stringify(url.endsWith('/user')?{id:123,login:'not-a-roster-name'}:[{full_name:'mitmedialab/agents2026-alice',permissions:{push:true}},{full_name:'mitmedialab/agents2026-bob',permissions:{pull:true}},{full_name:'mallory/agents2026-bob',permissions:{push:true}}]),{status:200});});
 assert.deepEqual(response.actors,['alice']);assert.equal(response.githubId,123);assert.equal(calls.length,2);
+const raine = {id:'raine',website:'https://mitmedialab.github.io/agents2026-raine/'};
+for (const [id, expected] of [[233789321,['raine']], [123,[]]]) {
+ const result = await githubGardens('test',[raine],async url => Response.json(url.endsWith('/user') ? {id,login:'rainscyy'} : []));
+ assert.deepEqual(result.actors,expected);
+}
 await assert.rejects(githubGardens('bad',students,async()=>new Response('{}',{status:401})));
 console.log('GitHub checks passed: tamper/expiry, exact repository matching, write access, read-only rejection, account identity, API failure.');fs.rmSync(tmp,{recursive:true});})().catch(e=>{console.error(e);process.exit(1)});

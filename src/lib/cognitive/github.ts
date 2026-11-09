@@ -10,6 +10,10 @@ export async function githubGardens(token:string,students:Student[],fetcher:type
  const headers={Authorization:`Bearer ${token}`,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
  const identity=await fetcher('https://api.github.com/user',{headers,cache:'no-store',signal:AbortSignal.timeout(15000)});
  if(!identity.ok)throw Error('GitHub could not verify your account.');const user=await identity.json();if(!Number.isInteger(user.id))throw Error('Invalid GitHub identity.');
+ // Verified roster binding for accounts whose organization hides repos from OAuth apps.
+ const enrolledGarden = user.id === 233789321
+  ? students.find(student => student.id === 'raine' && courseRepository(student) === 'mitmedialab/agents2026-raine')
+  : undefined;
  const writable=new Set<string>();
  for(let page=1;page<=20;page++){
   const response=await fetcher(`https://api.github.com/user/repos?affiliation=owner,collaborator,organization_member&per_page=100&page=${page}`,{headers,cache:'no-store',signal:AbortSignal.timeout(15000)});
@@ -18,5 +22,5 @@ export async function githubGardens(token:string,students:Student[],fetcher:type
   if(repos.length<100)break;
   if(page===20)throw Error('Too many repositories to verify automatically. Use your existing access code.');
  }
- return {githubId:user.id,login:String(user.login),actors:students.filter(s=>{const repo=courseRepository(s);return repo&&writable.has(repo);}).map(s=>s.id)};
+ return {githubId:user.id,login:String(user.login),actors:students.filter(s=>{const repo=courseRepository(s);return s===enrolledGarden||(repo&&writable.has(repo));}).map(s=>s.id)};
 }
